@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+/*
+   A와 B를 입력 받은 후, A/B를 출력하세요.
+   -객체화 및 함수화 처리하기
+   -A와 B를 숫자로 받기
+   -B=0 일 때 예외 문구 발생하기
+*/
+
+double division(double A, double B)
+{
+
+	return A / B;
+}
+
+
+int main()
+{
+	double A;
+	double B;
+
+	while (1) {
+		cout << "A와 B 입력 ? ";
+		cin >> A >> B;
+
+		//if(B==0||!cin)
+		if (B == 0 || cin.fail())
+			break;
+
+		cout << "A/B ? " << division(A, B) << endl;
+	}
+	cout << "다시 입력하세요.";
+}
